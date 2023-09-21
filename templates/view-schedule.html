@@ -1,0 +1,133 @@
+{%include 'header.html'%}
+<div>
+  {%include 'sidebar.html' %}
+  <div id="viewappointmentlist">
+    <h1>Patient Allotment Schedule</h1>
+    <div class="mb-3 form-start">
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 30vw;
+          padding-right: 5px;
+        "
+      >
+        <label for="dname">Enter Name of Doctor/Location</label>
+        <input type="search" id="dname" />
+      </div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          width: 30vw;
+          padding-left: 5px;
+        "
+      >
+        <label for="doa">Date Of Appointment</label>
+        <input type="date" id="doa" />
+        <p id="lastnameErrMsg" class="error-message"></p>
+      </div>
+    </div>
+    <hr class="hr-line" />
+    <ul
+      style="
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        background-color: darkblue;
+        color: white;
+        padding: 5px;
+      "
+    >
+      <li>Serial No.</li>
+      <li>Patient Name</li>
+      <li>Time Slot</li>
+      <li>Expected Duration</li>
+    </ul>
+    <ul style="list-style-type: none; padding: 5px; width: 60vw">
+      <div style="overflow-y: scroll">
+        <li
+          style="
+            display: flex;
+            justify-content: space-between;
+            background-color: #fffff0;
+            padding: 5px;
+          "
+        >
+          <p>1</p>
+          <p>Ram Babu</p>
+          <p>9:30-9:50</p>
+          <p>20min</p>
+        </li>
+        <li
+          style="
+            display: flex;
+            justify-content: space-between;
+            background-color: grey;
+            padding: 5px;
+          "
+        >
+          <p>2</p>
+          <p>Ram Babu</p>
+          <p>9:30-9:50</p>
+          <p>20min</p>
+        </li>
+        <li
+          style="
+            display: flex;
+            justify-content: space-between;
+            background-color: #fffff0;
+            padding: 5px;
+          "
+        >
+          <p>3</p>
+          <p>Ram Babu</p>
+          <p>9:30-9:50</p>
+          <p>20min</p>
+        </li>
+        <li
+          style="
+            display: flex;
+            justify-content: space-between;
+            background-color: grey;
+            padding: 5px;
+          "
+        >
+          <p>4</p>
+          <p>Ram Babu</p>
+          <p>9:30-9:50</p>
+          <p>20min</p>
+        </li>
+      </div>
+      <p style="text-align: center; background-color: #fffff0; height: 40px">
+        *UnbookedSlots
+      </p>
+      <div style="display: flex; justify-content: flex-end">
+        <button
+          style="background-color: gold"
+          onclick="window.location.href='/reschedule'"
+        >
+          <div
+            style="display: flex; justify-content: space-between; padding: 5px"
+          >
+            <p style="font-size: 20px">Reschedule</p>
+            <i class="fa-solid fa-caret-right"></i>
+          </div>
+        </button>
+        <button
+          style="background-color: darkblue"
+          onclick="window.location.href='/booking-schedule'"
+        >
+          <div
+            style="display: flex; justify-content: space-between; padding: 5px"
+          >
+            <p style="font-size: 20px; color: white">Register a Slot</p>
+            <i class="fa-solid fa-caret-right" style="color: white"></i>
+          </div>
+        </button>
+      </div>
+    </ul>
+  </div>
+</div>
+
+{%include 'footer.html'%}

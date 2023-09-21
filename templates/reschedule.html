@@ -1,0 +1,76 @@
+{%include 'header.html' %}
+
+<div id="reschedulepage">
+    {%include 'sidebar.html' %}
+        <div>
+            <h1>Request Rescheduling</h1>
+            <hr class="hr-line" />
+            <p>If you are new to XYZ hospital or are selecting a new physician,use the form below(or call toll-free 9087654321,Monday-Saturday,9:00am -4:00pm,IST) to request an appointment.Our trained Coordinators provde personalized service in English or your Native Language and will respond within a few minutes.</p>
+            <h1 class="p-2" style="font-size:20px;background-color:gold;">Appointment Form (Fields Marked with asterik(*) are required.)</h1>
+            <form id="myForm" class="p-3" style="background-color:#FFFFF0;font-weight:bold;">
+                <h1 style="font-size:20px;font-weight:bold;">Patient Information</h1>
+                <div class="mb-3 form-start">
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
+                        <label for="firstname">Patients First Name <span style="color:red">*</span></label>
+                        <input type="text" id="firstname" />
+                        <p id="firstnameErrMsg" class="error-message"></p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
+                        <label for="lastname">Patients Last Name <span style="color:red">*</span></label>
+                        <input type="text" id="lastname" />
+                        <p id="lastnameErrMsg" class="error-message"></p>
+                    </div>
+                </div>
+                <div class="mb-3 form-start">
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
+                        <label for="phonenumber">Phone Number<span style="color:red">*</span></label>
+                        <input type="text" id="phonenumber" />
+                        <p id="phonenumberErrMsg" class="error-message"></p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
+                        <label for="dob">Date of Birth<span style="color:red">*</span></label>
+                        <input type="date" id="dob" placeholder="DD/MM/YYYY" />
+                        <p id="dobErrMsg" class="error-message"></p>
+                    </div>
+
+                </div>
+                <div class="mb-3 form-start">
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
+                        <label for="email">Doctor Appointed</label>
+                        <input type="text" id="email" />
+                        <p id="emailErrMsg" class="error-message"></p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
+                        <label for="pdt">Prior Date and Time <span style="color:red">*</span></label>
+                        <input type="datetime-local" id="pdt" />
+                        <p id="departmentcodeErrMsg" class="error-message"></p>
+                    </div>
+                </div>
+                <div class="mb-3 form-start">
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
+                        <label for="email">Change the Doctor appointed<span style="color:red">*</span></label>
+                        <input type="text" id="email" />
+                        <p id="emailErrMsg" class="error-message"></p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
+                        <label for="pdt">change appointed Date and Time <span style="color:red">*</span></label>
+                        <input type="datetime-local" id="pdt" />
+                        <p id="departmentcodeErrMsg" class="error-message"></p>
+                    </div>
+                </div>
+                <div style="display:flex">
+                    <input type="checkbox" style="padding-left:5px; height:50px; " id="CheckboxId" />
+                    <p style="padding-left:5px; font-weight:normal;">The information provided by you on this site is for general purpose only.Your use of this site and your reliance in providing any information on this site is solely at your own risk</p>
+                </div>
+                <div class="form-button">
+                    <button class="btn btn-primary" style="align-self:end;">Reschedule Appointment</button>
+                </div>
+            </form>
+        </div>
+</div>
+
+
+    </div>
+</div>
+
+{%include 'footer.html' %}
