@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+</head>
+<body>
+    <div id="FormContainer">
+        <div class="ImgContainer">
+    
+    
+        </div>
+        <form id="Form">
+            <h1 id="FormHeading">Sign Up</h1>
+            <div class="Name">
+                <li><label>First Name:</label>
+                    <input type="text">
+                </li>
+                <li><label>Last Name:</label>
+                    <input type="text">
+                </li>
+            </div>
+            <li>
+                <label>Email:</label>
+                <input type="email">
+            </li>
+            <div class="Details">
+                <li>
+                    <label>Phone No:</label><input type="pattern">
+                </li>
+                <li>
+                    <label>Date Of Birth:</label><input type="date">
+                </li>
+            </div>
+            <div class="password">
+                <li><label>Password:</label> <input type="password"></li>
+                <li><label>Confirm Password:</label> <input type="password"></li>
+            </div>
+            <li class="Subscribe">
+                <div class="CheckBoxCont" onclick="ToggleCheckBox(this)" data-status="true">
+                    <div class="tick">
+                        <hr class="Tickline1">
+                        <hr class="Tickline2">
+                    </div>
+                </div><label for="subscribe">I want to get updates.</label>
+            </li>
+            <button type="submit" onclick="wid">Sign Up</button></a>
+        </form>
+    
+    </div>
+    <script src="{{ url_for('static', filename='hospital.js')}}"></script>
+</body>
+</html>
+

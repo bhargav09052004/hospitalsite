@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='hospital.css') }}">
+    <script src="https://kit.fontawesome.com/cf5834d24e.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div id="sectionUser">
+        <div class="home-header text-center">
+            <div style="display:flex;" class="mt-2">
+                <img src="https://res.cloudinary.com/dmnwhjps3/image/upload/v1694544330/Hospital_logo_medical_health_-_Made_with_PosterMyWall_fyqpcw.png" style="height:100px;width:100px;"/>
+                <h1 class="header-heading mt-4">Hospital Online Appointment Platform</h1>
+            </div>
+            
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <a class="navbar-brand" href="#">
+                    <img src="" class="navbar-image" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon ic"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarNavAltMarkup">
+                    <div class="navbar-nav m-auto p-0">
+                        <a class="nav-link active" href="/sign-up"><button style="background-color:blue;color:white;font-size:22px;padding:5px;">Signup</button><span class="sr-only">(current)</span></a>
+                        <a class="nav-link active" href="/sign-in"><button style="background-color:yellow;font-size:22px;padding:5px;">SignIn</button></a>
+                        <a class="nav-link active" href="#" style="color:red;font-size:22px;">Emergency</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="start-page">
+        </div>
+    </div>
+    {%include 'footer.html' %}

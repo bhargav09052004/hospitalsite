@@ -8,35 +8,40 @@
             <p>If you are new to XYZ hospital or are selecting a new physician,use the form below(or call toll-free 9087654321,Monday-Saturday,9:00am -4:00pm,IST) to request an appointment.Our trained Coordinators provde personalized service in English or your Native Language and will respond within a few minutes.</p>
             <h1 class="p-2" style="font-size:20px;background-color:gold;">Appointment Form (Fields Marked with asterik(*) are required.)</h1>
             <form id="myForm" class="p-3" style="background-color:#FFFFF0;font-weight:bold;" method="POST" action="/booking-schedule">
+               
                 <h1 style="font-size:20px;font-weight:bold;">Patient Information</h1>
-                <div class="mb-3 form-start">
+                <div class="mb-3">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="firstname">First Name <span style="color:red">*</span></label>
-                        <input type="text" id="firstname" />
-                        <p id="firstnameErrMsg" class="error-message"></p>
-                    </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="lastname">Last Name <span style="color:red">*</span></label>
-                        <input type="text" id="lastname" />
-                        <p id="lastnameErrMsg" class="error-message"></p>
+                        <label for="name">Patient's Name<span style="color:red">*</span></label>
+                        <input type="text" id="text"/>
+                        <p id="dobErrMsg" class="error-message"></p>
                     </div>
                 </div>
-                <div class="mb-3 form-start">
+                <div class="mb-3 ">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
                         <label for="phonenumber">Phone Number<span style="color:red">*</span></label>
                         <input type="number" maxlength="10" id="phonenumber"  pattern="/d{10}" title="Enter 10 digits only"/>
                         <p id="phonenumberErrMsg" class="error-message"></p>
                     </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="email">Email Id</label>
-                        <input type="text" id="email" />
+                    <div style="display:flex;flex-direction:column;width:20vw;padding-left:5px;">
+                        <label for="category">Category<span style="color:red;">*</span></label>
+                        <select name="category" id="category">
+                            <option value="" disabled selected>Select Category</option>
+                            <option value="NEW">New Consulation</option>
+                            <option value="PD">Post Diagnostics</option>
+                        </select>
                         <p id="emailErrMsg" class="error-message"></p>
                     </div>
                 </div>
                 <div class="mb-3 form-start">
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="dob">Date of Birth<span style="color:red">*</span></label>
-                        <input type="date" id="dob" placeholder="DD/MM/YYYY" />
+                    <div style="display:flex;flex-direction:column;width:15vw;padding-left:5px;">
+                        <label for="appointment_date">Select Date<span style="color:red">*</span></label>
+                        <input type="date" id="appointment_date" placeholder="DD/MM/YYYY" />
+                        <p id="dobErrMsg" class="error-message"></p>
+                    </div>
+                    <div style="display:flex;flex-direction:column;width:15vw;padding-left:5px;">
+                        <label for="appointment_time">Select Time<span style="color:red">*</span></label>
+                        <input type="time" id="appointment_time" placeholder="DD/MM/YYYY" />
                         <p id="dobErrMsg" class="error-message"></p>
                     </div>
                     <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
@@ -60,7 +65,7 @@
                     </div>
                 </div>
                 <div style="display:flex;flex-direction:column;width:80vw;padding-left:5px;" class="mb-3">
-                    <label>Specific Symtomps <span style="color:red">*</span></label>
+                    <label>Specific Symptoms <span style="color:red">*</span></label>
                     <select id="symptoms" name="symptoms" style="height:5vh;">
                         <option value="" disabled selected>Select Symptom(s)</option>
                         <option value="fever">Fever</option>
@@ -83,8 +88,8 @@
                     </select>
                 </div>
                 <div style="display:flex;flex-direction:column;width:80vw;padding-left:5px;" class="mb-3">
-                    <label for="departmentcode">Any Specific Reqirements for Patients <span style="color:red">*</span></label>
-                    <select id="specific_requirements" name="specific_requirements" style="height:5vh;">
+                    <label for="availabledoctor">Available Doctors</label>
+                    <select id="availabledoctor" name="availabledoctor" style="height:5vh;">
                         <option value="" disabled selected>Select Specific Requirements</option>
                         <option value="wheelchair_access">Wheelchair access</option>
                         <option value="sign_language_interpreter">Sign language interpreter</option>
@@ -96,32 +101,7 @@
                     </select>
 
                 </div>
-                <div style="display:flex;flex-direction:column;width:80vw;padding-left:5px;" class="mb-3">
-                    <label for="departmentcode">Persons Occupation or Qualification<span style="color:red">*</span></label>
-                    <select name="occupation_or_qualification" style="height:5vh;">
-                        <option value="" disabled selected>Select Occupation or Qualification</option>
-                        <optgroup label="Occupations">
-                            <option value="Doctor">Doctor</option>
-                            <option value="Engineer">Engineer</option>
-                            <option value="Teacher">Teacher</option>
-                            <option value="Lawyer">Lawyer</option>
-                            <option value="Accountant">Accountant</option>
-                            <option value="Salesperson">Salesperson</option>
-                            <option value="Manager">Manager</option>
-                            <option value="Nurse">Nurse</option>
-                            <option value="Police Officer">Police Officer</option>
-                            <option value="Firefighter">Firefighter</option>
-                            <option value="Other">Other</option>
-                        </optgroup>
-                        <optgroup label="Qualifications">
-                            <option value="Bachelor's Degree">Bachelor's Degree</option>
-                            <option value="Master's Degree">Master's Degree</option>
-                            <option value="Doctorate Degree">Doctorate Degree</option>
-                            <option value="Professional Certification">Professional Certification</option>
-                            <option value="Other">Other</option>
-                        </optgroup>
-                    </select>
-                </div>
+               
                 <div style="display:flex">
                     <input type="checkbox" style="padding-left:5px; height:50px; " id="CheckboxId" />
                     <p style="padding-left:5px; font-weight:normal;">The information provided by you on this site is for general purpose only.Your use of this site and your reliance in providing any information on this site is solely at your own risk</p>

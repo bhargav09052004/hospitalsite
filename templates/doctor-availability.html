@@ -2,68 +2,207 @@
 
 <div id="doctoravailpage">
     <div class="dab">
-        <div class="doctoravail-body-card">
+        <div class="doctoravail-body-card text-center">
             <h1>Find a Doctor</h1>
-            <p>Find a right doctor for you at any Hospital XYZ Locations and affiliates</p>
+            <p style="font-size:18px;">Find a right doctor for you at any Hospital XYZ Locations and affiliates</p>
 
-            <div style="display:flex;">
-                <div style="display:flex;flex-direction:column;">
-                    <label htmlFor="search1" class="labelText">Search For a Condition or Procedure or Doctor Name</label>
-                    <input type="search" id="search1" />
-                </div>
-                <p style="margin:5px;"> OR </p>
-                <div style="display:flex;flex-direction:column;">
-                    <label htmlFor="search2" class="labelText">Search By Address or City or Pincode within 5km</label>
-                    <input type="search" id="search2" />
-                </div>
-                <div class="col-12 d-none mt-5" id="spinner">
-                    <div class="d-flex flex-row justify-content-center">
-                        <div class="spinner-border" role="status"></div>
+            <div style="display:flex;justify-content:center;">
+                <div style="display:flex;flex-direction: column;" class="mr-5">
+                    <label htmlFor="search1" class="labelText" >Search By Name</label>
+                    <div style="display:flex;">
+                        <input type="search" id="search1" class="text-width"/>
+                        <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
+                    
+                </div>
+                <div style="display:flex;flex-direction:column;" class="mr-5 mb-5">
+                    <label htmlFor="search2" class="labelText">Search By Specialty</label>
+                    <input type="search" id="search2" class="text-width"/>
+                </div>
+                <div style="display:flex;flex-direction:column;" class="mr-5 mb-5">
+                    <label htmlFor="search2" class="labelText">Search By Location</label>
+                    <input type="search" id="search2" class="text-width"/>
                 </div>
             </div>
-            <div style="display:flex">
-                <div class="left order" style="display:flex; flex-direction:column">
-                    <div class="sortBy" style="width:200px;">
-                        <h1 class="doc-appoint-heading">Search by</h1>
-                        <div class="subelement ">
-                            <h1 class="subheading-card pr-3">Name</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div class="subelement">
-                            <h1 class="subheading-card">Speciality</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div class="subelement">
-                            <h1 class="subheading-card">Interest</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div class="subelement">
-                            <h1 class="subheading-card">Location</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div class="subelement">
-                            <h1 class="subheading-card">Language</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div class="subelement">
-                            <h1 class="subheading-card">Gender</h1>
-                            <i class="fa-solid fa-caret-down"></i>
-                        </div>
+            <div>
+            <div id="carouselExample" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div style="display:flex;justify-content:center;" class="mb-3">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Y K Mishra MD</h4>
+                              <p class="card-text">Dermatology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Susan Ann. MD,MS</h4>
+                              <p class="card-text">Cardiology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Paul Jenet MBBS,MBA</h4>
+                              <p class="card-text">Psychiatry</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
                     </div>
-                    <div class="subelement " style="background-color:gold;">
-                        <h1 class="subheading-card pr-3" style="color:black;">Request Appointment</h1>
-                        <i class="fa-solid fa-caret-right"></i>
-                    </div>
-                    <div class="mt-3 ml-2 p-2" style="background-color:white;">
-                        <p>New Patients Please Call Toll Free Number</p>
-                        <p style="color:blue;">1234567890</p>
-                        <p>Monday to Saturday</p>
-                        <p>9 A.M to 4 P.M IST</p>
+                    
+                    <div style="display:flex;justify-content:center;">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr M Murali Krishna MD</h4>
+                              <p class="card-text">Orthopedics</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Amit Sharama MA,MBBS</h4>
+                              <p class="card-text">Cardiology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Ravi Krishna MD,MS</h4>
+                              <p class="card-text">Oncology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
                     </div>
                 </div>
-                <div class="row result-doctors resultDoctors" id="resultDoctors"></div>
-            </div>
+                  <div class="carousel-item">
+                    <div style="display:flex;justify-content:center;" class="mb-3">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Vivek MD</h4>
+                              <p class="card-text">Dermatology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Vishnu MBBS,MBA</h4>
+                              <p class="card-text">Neurology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Paul Jenet MD,MS</h4>
+                              <p class="card-text">Cardiology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                    </div>
+                    <div style="display:flex;justify-content:center;" class="mb-3">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Sharma MD</h4>
+                              <p class="card-text">ENT</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Vardhan MD,MS</h4>
+                              <p class="card-text">Cardiology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Naveen MBBS,MBA</h4>
+                              <p class="card-text">Orthopedic</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div style="display:flex;justify-content:center;" class="mb-3">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Rajesh MD</h4>
+                              <p class="card-text">Cardilogy</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Patnaik MBBS</h4>
+                              <p class="card-text">Neurology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Mahesh MBBS,MBA</h4>
+                              <p class="card-text">Psychiatry</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                    </div>
+                    <div style="display:flex;justify-content:center;" class="mb-3">
+                        <div class="carousel-card" >
+                            <img src="static\doctor-image.jpeg" alt="Image 1">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Ramesh MD</h4>
+                              <p class="card-text">Orthopedic</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 2">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Swetha MBBS</h4>
+                              <p class="card-text">Gynecology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                          <div class="carousel-card">
+                            <img src="static\doctor-image.jpeg" alt="Image 3">
+                            <div class="card-body">
+                              <h4 class="card-title">Dr Minal MBBS,MBA</h4>
+                              <p class="card-text">Gynecology</p>
+                              <button class="carousel-button"><a href="/booking-schedule" style="color:black;">Request Appointment</a></button>
+                            </div>
+                          </div>
+                    </div>
+                  </div>
+                 
+                </div>
+                <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+              
+            </div>  
         </div>
     </div>
 </div>

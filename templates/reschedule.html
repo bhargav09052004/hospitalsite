@@ -1,6 +1,6 @@
 {%include 'header.html' %}
 
-<div id="reschedulepage">
+<div id="reschedulepage" class="p-3">
     {%include 'sidebar.html' %}
         <div>
             <h1>Request Rescheduling</h1>
@@ -11,52 +11,42 @@
                 <h1 style="font-size:20px;font-weight:bold;">Patient Information</h1>
                 <div class="mb-3 form-start">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="firstname">Patients First Name <span style="color:red">*</span></label>
-                        <input type="text" id="firstname" />
+                        <label for="patientid">Patients ID<span style="color:red">*</span></label>
+                        <input type="text" id="patientid" />
                         <p id="firstnameErrMsg" class="error-message"></p>
                     </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="lastname">Patients Last Name <span style="color:red">*</span></label>
-                        <input type="text" id="lastname" />
-                        <p id="lastnameErrMsg" class="error-message"></p>
-                    </div>
+                    
                 </div>
                 <div class="mb-3 form-start">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="phonenumber">Phone Number<span style="color:red">*</span></label>
-                        <input type="text" id="phonenumber" />
+                        <label for="changevalue">Do you want to change Doctor<span style="color:red;">*</span></label>
+                        <select name="changevalue" id="changevalue">
+                            <option value="yes">YES</option>
+                            <option value="no" selected>NO</option>
+                        </select>
                         <p id="phonenumberErrMsg" class="error-message"></p>
-                    </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="dob">Date of Birth<span style="color:red">*</span></label>
-                        <input type="date" id="dob" placeholder="DD/MM/YYYY" />
-                        <p id="dobErrMsg" class="error-message"></p>
                     </div>
 
                 </div>
+             
                 <div class="mb-3 form-start">
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="email">Doctor Appointed</label>
-                        <input type="text" id="email" />
-                        <p id="emailErrMsg" class="error-message"></p>
+                    <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" id="changeappointeddiv">
+                        <label for="changedoctor">Change the Doctor appointed<span style="color:red">*</span></label>
+                        <input type="text" id="changedoctor" />
                     </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="pdt">Prior Date and Time <span style="color:red">*</span></label>
-                        <input type="datetime-local" id="pdt" />
-                        <p id="departmentcodeErrMsg" class="error-message"></p>
+                    <div style="display:flex;">
+                        <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" >
+                            <label for="cad">change appointed Date <span style="color:red">*</span></label>
+                            <input type="date" id="cad" />
+                            <p id="departmentcodeErrMsg" class="error-message"></p>
+                        </div>
+                        <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" >
+                            <label for="cat">change appointed  Time <span style="color:red">*</span></label>
+                            <input type="time" id="cat" />
+                            <p id="departmentcodeErrMsg" class="error-message"></p>
+                        </div>
                     </div>
-                </div>
-                <div class="mb-3 form-start">
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="email">Change the Doctor appointed<span style="color:red">*</span></label>
-                        <input type="text" id="email" />
-                        <p id="emailErrMsg" class="error-message"></p>
-                    </div>
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="pdt">change appointed Date and Time <span style="color:red">*</span></label>
-                        <input type="datetime-local" id="pdt" />
-                        <p id="departmentcodeErrMsg" class="error-message"></p>
-                    </div>
+                    
                 </div>
                 <div style="display:flex">
                     <input type="checkbox" style="padding-left:5px; height:50px; " id="CheckboxId" />
@@ -69,8 +59,7 @@
         </div>
 </div>
 
-
-    </div>
+     </div>
 </div>
 
 {%include 'footer.html' %}

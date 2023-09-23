@@ -38,9 +38,21 @@ def view_schedule():
 def patient_gateway():
     return render_template('patient-gateway.html')
 
+@app.route('/sign-up')
+def sign_up():
+    return render_template('sign-up.html')
+
+@app.route('/sign-in')
+def sign_in():
+    return render_template('sign-in.html')
+
+@app.route('/hospital')
+def hospital():
+    return render_template('hospital.html')
+
 @app.route('/')
 def main():
-    return render_template('hospital.html')
+    return render_template('start.html')
 
 @app.route('/booking-schedule',methods=['POST'])
 def Appointment_Booking():
