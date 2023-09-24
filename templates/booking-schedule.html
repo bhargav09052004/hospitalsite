@@ -12,20 +12,20 @@
                 <h1 style="font-size:20px;font-weight:bold;">Patient Information</h1>
                 <div class="mb-3">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="name">Patient's Name<span style="color:red">*</span></label>
-                        <input type="text" id="text"/>
+                        <label for="patient_id">Patient's Id<span style="color:red">*</span></label>
+                        <input type="text" name="patient_id" id="patient_id"/>
                         <p id="dobErrMsg" class="error-message"></p>
                     </div>
                 </div>
                 <div class="mb-3 ">
-                    <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
+                    <!-- <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
                         <label for="phonenumber">Phone Number<span style="color:red">*</span></label>
                         <input type="number" maxlength="10" id="phonenumber"  pattern="/d{10}" title="Enter 10 digits only"/>
                         <p id="phonenumberErrMsg" class="error-message"></p>
-                    </div>
+                    </div> -->
                     <div style="display:flex;flex-direction:column;width:20vw;padding-left:5px;">
                         <label for="category">Category<span style="color:red;">*</span></label>
-                        <select name="category" id="category">
+                        <select type="text" name="category" id="category">
                             <option value="" disabled selected>Select Category</option>
                             <option value="NEW">New Consulation</option>
                             <option value="PD">Post Diagnostics</option>
@@ -35,18 +35,18 @@
                 </div>
                 <div class="mb-3 form-start">
                     <div style="display:flex;flex-direction:column;width:15vw;padding-left:5px;">
-                        <label for="appointment_date">Select Date<span style="color:red">*</span></label>
-                        <input type="date" id="appointment_date" placeholder="DD/MM/YYYY" />
+                        <label for="date">Select Date<span style="color:red">*</span></label>
+                        <input type="date" name="date" id="date" placeholder="DD/MM/YYYY" />
                         <p id="dobErrMsg" class="error-message"></p>
                     </div>
                     <div style="display:flex;flex-direction:column;width:15vw;padding-left:5px;">
-                        <label for="appointment_time">Select Time<span style="color:red">*</span></label>
-                        <input type="time" id="appointment_time" placeholder="DD/MM/YYYY" />
+                        <label for="time">Select Time<span style="color:red">*</span></label>
+                        <input type="time" name="time" id="time" placeholder="DD/MM/YYYY" />
                         <p id="dobErrMsg" class="error-message"></p>
                     </div>
                     <div style="display:flex;flex-direction:column;width:30vw;padding-right:5px;">
-                        <label for="departmentcode">Department to Schedule with <span style="color:red">*</span></label>
-                        <select name="departmentcode" id="departmentcode">
+                        <label for="department">Department to Schedule with <span style="color:red">*</span></label>
+                        <select name="department" id="department">
                             <option value="">Select Department</option>
                             <option value="MED">Medicine</option>
                             <option value="SURG">Surgery</option>
@@ -66,7 +66,7 @@
                 </div>
                 <div style="display:flex;flex-direction:column;width:80vw;padding-left:5px;" class="mb-3">
                     <label>Specific Symptoms <span style="color:red">*</span></label>
-                    <select id="symptoms" name="symptoms" style="height:5vh;">
+                    <select id="symptom" name="symptom" style="height:5vh;">
                         <option value="" disabled selected>Select Symptom(s)</option>
                         <option value="fever">Fever</option>
                         <option value="cough">Cough</option>
@@ -90,13 +90,13 @@
                 <div style="display:flex;flex-direction:column;width:80vw;padding-left:5px;" class="mb-3">
                     <label for="availabledoctor">Available Doctors</label>
                     <select id="availabledoctor" name="availabledoctor" style="height:5vh;">
-                        <option value="" disabled selected>Select Specific Requirements</option>
-                        <option value="wheelchair_access">Wheelchair access</option>
-                        <option value="sign_language_interpreter">Sign language interpreter</option>
-                        <option value="translator">Translator</option>
-                        <option value="vegetarian_meal">Vegetarian meal</option>
-                        <option value="halal_meal">Halal meal</option>
-                        <option value="kosher_meal">Kosher meal</option>
+                        <option value="" disabled selected>Select your doctor </option>
+                        <option value="Dr. Srinivas">Dr. Srinivas</option>
+                        <option value="Dr. Rao">Dr. Rao</option>
+                        <option value="Dr. Shyam">Dr. Shyam</option>
+                        <option value="Dr. Patta">Dr. Patta</option>
+                        <option value="Dr. Vijay Kumar">Dr. Vijay Kumar</option>
+                        <option value="Dr. Ananth Das">Dr. Ananth Das</option>
                         <option value="other">Other</option>
                     </select>
 

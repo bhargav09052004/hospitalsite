@@ -1,0 +1,15 @@
+.bg-image-vertical {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+    }
+.back-img{
+    background-image:url("https://media.istockphoto.com/id/1041003512/photo/clinical-suite-in-hospital.jpg");
+} 
+    @media (min-width: 1025px) {
+    .h-custom-2 {
+    height: 100%;
+    }
+    }

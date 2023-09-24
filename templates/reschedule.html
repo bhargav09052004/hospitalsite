@@ -1,4 +1,5 @@
 {%include 'header.html' %}
+<h5 style="color: red;">{{msg}}</h5>
 
 <div id="reschedulepage" class="p-3">
     {%include 'sidebar.html' %}
@@ -7,12 +8,12 @@
             <hr class="hr-line" />
             <p>If you are new to XYZ hospital or are selecting a new physician,use the form below(or call toll-free 9087654321,Monday-Saturday,9:00am -4:00pm,IST) to request an appointment.Our trained Coordinators provde personalized service in English or your Native Language and will respond within a few minutes.</p>
             <h1 class="p-2" style="font-size:20px;background-color:gold;">Appointment Form (Fields Marked with asterik(*) are required.)</h1>
-            <form id="myForm" class="p-3" style="background-color:#FFFFF0;font-weight:bold;">
+            <form id="myForm" class="p-3" style="background-color:#FFFFF0;font-weight:bold;" method="POST" action="/reschedule">
                 <h1 style="font-size:20px;font-weight:bold;">Patient Information</h1>
                 <div class="mb-3 form-start">
                     <div style="display:flex;flex-direction:column;width:30vw;padding-left:5px;">
-                        <label for="patientid">Patients ID<span style="color:red">*</span></label>
-                        <input type="text" id="patientid" />
+                        <label for="appointment_id">Appointment ID<span style="color:red">*</span></label>
+                        <input type="text" name="appointment_id" id="appointment_id" />
                         <p id="firstnameErrMsg" class="error-message"></p>
                     </div>
                     
@@ -32,17 +33,26 @@
                 <div class="mb-3 form-start">
                     <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" id="changeappointeddiv">
                         <label for="changedoctor">Change the Doctor appointed<span style="color:red">*</span></label>
-                        <input type="text" id="changedoctor" />
+                        <select id="changedoctor" name="changedoctor" style="height:5vh;">
+                            <option value="" disabled selected>Select your doctor </option>
+                            <option value="Dr. Srinivas">Dr. Srinivas</option>
+                            <option value="Dr. Rao">Dr. Rao</option>
+                            <option value="Dr. Shyam">Dr. Shyam</option>
+                            <option value="Dr. Patta">Dr. Patta</option>
+                            <option value="Dr. Vijay Kumar">Dr. Vijay Kumar</option>
+                            <option value="Dr. Ananth Das">Dr. Ananth Das</option>
+                            <option value="other">Other</option>
+                        </select>
                     </div>
                     <div style="display:flex;">
                         <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" >
                             <label for="cad">change appointed Date <span style="color:red">*</span></label>
-                            <input type="date" id="cad" />
+                            <input type="date" name="cad" id="cad" />
                             <p id="departmentcodeErrMsg" class="error-message"></p>
                         </div>
                         <div style="display:flex;flex-direction:column;width:20vw;padding-right:5px;" >
                             <label for="cat">change appointed  Time <span style="color:red">*</span></label>
-                            <input type="time" id="cat" />
+                            <input type="time" name="cat" id="cat" />
                             <p id="departmentcodeErrMsg" class="error-message"></p>
                         </div>
                     </div>
